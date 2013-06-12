@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/informations_ui">
+
+	
+    <RelativeLayout
+        android:id="@+id/speedometer"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="30dp"
+		android:layout_toRightOf="@id/compass" >
+		
+        <ImageView
+            android:id="@+id/speed_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/speed_base" />
+
+        <ImageView
+            android:id="@+id/speed_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/speed_arrow" />
+
+        <ImageView
+            android:id="@+id/speed_center_wheel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/speed_center_wheel" />
+        
+        <com.insa.carosif.TextView 
+            android:id="@+id/speed_text"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginBottom="50dp"
+	        android:gravity="center"
+	        android:textSize="50sp"
+	        android:text="00" />
+            
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/temperature"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+		android:layout_toRightOf="@id/speedometer"
+		android:layout_alignTop="@id/compass" >
+
+        <ImageView
+            android:id="@+id/temp_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/temp_base" />
+
+        <ImageView
+            android:id="@+id/temp_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/temp_arrow" />
+
+        <ImageView
+            android:id="@+id/temp_center_wheel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/temp_center_wheel" />
+        
+        <com.insa.carosif.TextView 
+            android:id="@+id/temp_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginBottom="30dp"
+	        android:gravity="center"
+	        android:textSize="25sp"
+	        android:text="00°C" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/compass"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@id/speedometer" >
+
+        <ImageView
+            android:id="@+id/compass_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/compass_base" />
+
+        <ImageView
+            android:id="@+id/compass_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/compass_arrow" />
+
+        <ImageView
+            android:id="@+id/compass_center_wheel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/compass_center_wheel" />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+       	android:id="@+id/compass_group"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/compass"
+        android:layout_above="@id/compass">
+        
+        <com.insa.carosif.TextView 
+            android:id="@+id/compass_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:gravity="center"
+	        android:textSize="25sp"
+	        android:text="00°N" />
+    </RelativeLayout >
+    
+    <com.insa.carosif.TextView 
+            android:id="@+id/obstacle"
+	        android:layout_width="400dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/speedometer"
+	        android:layout_alignLeft="@id/speedometer"
+	        android:gravity="center"
+	        android:alpha="0.4"
+	        android:textSize="25sp"
+	        android:background="@drawable/rounded_corner"
+	        android:text="Closest obstacle at 00 mm" />
+
+</RelativeLayout>
